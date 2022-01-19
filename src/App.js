@@ -33,7 +33,7 @@ function App() {
     let date = new Date();
     date.setDate(date.getDate() - 1);
     let endDate = date.toISOString().slice(0, 10);
-    date.setDate(date.getDate() - 20);
+    date.setDate(date.getDate() - 10);
     let startDate = date.toISOString().slice(0, 10);
     console.log(startDate + " " + endDate);
     server.getResultWithCallback(null, callBack, errorHandler, "https://api.nasa.gov/planetary/apod?api_key=jEgBvIifn0mS8LkqoWv6hMQetbbE2sEL4wkBkBdM&start_date=" + startDate + "&end_date=" + endDate, "get");
